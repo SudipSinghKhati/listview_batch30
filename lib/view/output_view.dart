@@ -24,13 +24,19 @@ class _OutputViewState extends State<OutputView> {
           title: const Text('Output View'),
           centerTitle: true,
         ),
-        body: ListView.builder(
+        body: ListView.separated(
+          separatorBuilder: (BuildContext context, int index) =>
+              const Divider(),
           itemCount: lstStudents!.length,
           itemBuilder: (context, index) {
             var fname = lstStudents![index].fname!;
             var lname = lstStudents![index].lname!;
             var address = lstStudents![index].address!;
             return ListTile(
+                shape: RoundedRectangleBorder(
+                  side: const BorderSide(width: 2),
+                  borderRadius: BorderRadius.circular(20),
+                ),
                 title: Text('$fname  $lname'),
                 subtitle: Text(address),
                 leading: const CircleAvatar(
