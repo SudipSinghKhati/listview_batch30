@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:listview_batch30/view/card.dart';
+import 'package:listview_batch30/view/classwork.dart';
+import 'package:listview_batch30/view/dashboard.dart';
+import 'package:listview_batch30/view/grid_view_screen.dart';
 import 'package:listview_batch30/view/output_view.dart';
 import 'package:listview_batch30/view/student_view.dart';
 
@@ -9,8 +13,12 @@ void main() {
       title: 'Student Details',
       initialRoute: '/',
       routes: {
-        '/': (context) => const StudentView(),
+        '/': (context) => const DashboardView(),
+        '/studentRoute': (context) => const StudentView(),
         '/outputRoute': (context) => const OutputView(),
+        '/classworkRoute': (context) => const ClassworkView(),
+        '/cardRoute': (context) => const CardView(),
+        '/gridRoute':(context) => const GridViewScreen(),
       },
     ),
   );
