@@ -49,6 +49,24 @@ class DashboardView extends StatelessWidget {
                   child: const Text("Grid View"),
                 ),
               ),
+               SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/stackRoute');
+                  },
+                  child: const Text("Stack View"),
+                ),
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/classworkstackRoute');
+                  },
+                  child: const Text("Classwork Stack View"),
+                ),
+              ),
             ],
           ),
         ),
